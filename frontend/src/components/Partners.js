@@ -2,27 +2,35 @@ import { motion } from "framer-motion";
 import Marquee from "react-fast-marquee";
 
 const partners = [
-  "Apex Industries",
-  "NovaTech Solutions",
-  "Global Freight Co.",
-  "Summit Logistics",
-  "Vertex Supply",
-  "PrimeWare Inc.",
-  "Atlas Trading",
-  "Meridian Corp.",
-  "Zenith Materials",
-  "OmniPath Systems",
+  { name: "Apex Industries", logo: null },
+  { name: "NovaTech Solutions", logo: null },
+  { name: "Global Freight Co.", logo: null },
+  { name: "Summit Logistics", logo: null },
+  { name: "Vertex Supply", logo: null },
+  { name: "PrimeWare Inc.", logo: null },
+  { name: "Atlas Trading", logo: null },
+  { name: "Meridian Corp.", logo: null },
+  { name: "Zenith Materials", logo: null },
+  { name: "OmniPath Systems", logo: null },
 ];
 
-function PlaceholderLogo({ name }) {
+function PartnerLogo({ partner }) {
   return (
     <div
       className="flex items-center justify-center px-10 py-4 mx-6 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-300 select-none"
-      data-testid={`partner-logo-${name.toLowerCase().replace(/[\s.]+/g, "-")}`}
+      data-testid={`partner-logo-${partner.name.toLowerCase().replace(/[\s.]+/g, "-")}`}
     >
-      <span className="font-heading font-bold uppercase tracking-wider text-slate-300 text-lg md:text-xl whitespace-nowrap">
-        {name}
-      </span>
+      {partner.logo ? (
+        <img
+          src={partner.logo}
+          alt={partner.name}
+          className="h-10 md:h-12 w-auto object-contain"
+        />
+      ) : (
+        <span className="font-heading font-bold uppercase tracking-wider text-slate-300 text-lg md:text-xl whitespace-nowrap">
+          {partner.name}
+        </span>
+      )}
     </div>
   );
 }
