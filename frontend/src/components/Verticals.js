@@ -14,15 +14,15 @@ const verticals = [
     description: "Raw materials to precision components. We source and deliver at scale.",
     icon: Factory,
     image: "https://images.unsplash.com/photo-1764114903065-4cc137dd303b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjd8MHwxfHNlYXJjaHwyfHxpbmR1c3RyaWFsJTIwZmFjdG9yeSUyMG1hbnVmYWN0dXJpbmclMjB3b3JrZXJ8ZW58MHx8fHwxNzcxODQwODAxfDA&ixlib=rb-4.1.0&q=85",
-    span: "col-span-1 md:col-span-2 row-span-2",
-    tall: true,
+    span: "col-span-1 md:col-span-2 row-span-1",
+    tall: false,
   },
   {
     title: "FMCG Distribution",
     description: "Fast-moving consumer goods delivered with precision timing.",
     icon: ShoppingCart,
     image: "https://images.unsplash.com/photo-1760776140488-32fcfab4066a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwyfHxzdXBlcm1hcmtldCUyMGdyb2NlcnklMjBzaGVsZiUyMGJsdXJyeXxlbnwwfHx8fDE3NzE4NDA4MDJ8MA&ixlib=rb-4.1.0&q=85",
-    span: "col-span-1 row-span-1",
+    span: "col-span-1 md:col-span-2 row-span-1",
     tall: false,
   },
   {
@@ -30,7 +30,7 @@ const verticals = [
     description: "Sensitive tech components handled with care and speed.",
     icon: Cpu,
     image: "https://images.unsplash.com/photo-1771189957050-76f13238f858?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTZ8MHwxfHNlYXJjaHwyfHxlbGVjdHJvbmljJTIwY2lyY3VpdCUyMGJvYXJkJTIwY29tcHV0ZXIlMjBjaGlwfGVufDB8fHx8MTc3MTg0MDgwM3ww&ixlib=rb-4.1.0&q=85",
-    span: "col-span-1 row-span-1",
+    span: "col-span-1 md:col-span-2 row-span-1",
     tall: false,
   },
   {
@@ -38,8 +38,8 @@ const verticals = [
     description: "Temperature-controlled, compliant distribution for pharma and medical.",
     icon: HeartPulse,
     image: "https://images.unsplash.com/photo-1671108503276-1d3d5ab23a3a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzJ8MHwxfHNlYXJjaHwxfHxwaGFybWFjZXV0aWNhbCUyMGNvbGQlMjBzdG9yYWdlJTIwbWVkaWNhbCUyMHN1cHBsaWVzfGVufDB8fHx8MTc3MTg0MDgwNHww&ixlib=rb-4.1.0&q=85",
-    span: "col-span-1 row-span-2",
-    tall: true,
+    span: "col-span-1 md:col-span-2 row-span-1",
+    tall: false,
   },
   {
     title: "Retail Supply",
@@ -54,7 +54,7 @@ const verticals = [
     description: "Supply chain advisory to optimize your distribution strategy.",
     icon: BriefcaseBusiness,
     image: "https://images.unsplash.com/photo-1758518730037-a16581a040e8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzN8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBib2FyZHJvb20lMjBzdHJhdGVnaWMlMjBtZWV0aW5nfGVufDB8fHx8MTc3MTg0MDgwNXww&ixlib=rb-4.1.0&q=85",
-    span: "col-span-1 row-span-1",
+    span: "col-span-1 md:col-span-2 row-span-1",
     tall: false,
   },
 ];
