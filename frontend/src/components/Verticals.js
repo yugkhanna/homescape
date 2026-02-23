@@ -103,7 +103,7 @@ export default function Verticals() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-4 auto-rows-[200px] md:auto-rows-[220px] gap-2"
+          className="grid grid-cols-1 md:grid-cols-4 auto-rows-[240px] gap-2"
           data-testid="verticals-grid"
         >
           {verticals.map((item) => (
