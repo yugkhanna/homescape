@@ -44,7 +44,7 @@ export default function Partners() {
         >
           <span className="section-label block mb-4">Our Partners</span>
           <h2
-            className="font-heading font-black uppercase tracking-tight leading-none text-white text-4xl sm:text-5xl lg:text-6xl"
+            className="font-heading font-black uppercase tracking-tight leading-none text-white text-5xl sm:text-6xl lg:text-7xl"
             data-testid="partners-heading"
           >
             Trusted By <span className="text-orange-500">Industry Leaders</span>
