@@ -43,7 +43,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="section-label inline-block mb-6"
+            className="font-heading font-bold uppercase tracking-widest text-orange-500 text-lg md:text-2xl inline-block mb-6"
             data-testid="hero-label"
           >
             HomeScape Group Pvt Ltd
@@ -66,7 +66,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-slate-400 text-base md:text-lg tracking-wide leading-relaxed max-w-xl mb-12"
+            className="text-slate-200 text-lg md:text-2xl tracking-wide leading-relaxed max-w-2xl mb-12 font-heading font-medium"
             data-testid="hero-subtext"
           >
             Expertly Powering Supply, Strategically Enabling Growth.
