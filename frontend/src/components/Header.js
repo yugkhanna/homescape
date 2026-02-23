@@ -41,7 +41,16 @@ export default function Header() {
           className="cursor-pointer"
           data-testid="header-logo"
         >
-          <span className="text-white font-heading font-black tracking-tighter text-2xl uppercase">
+          <img
+            src="/logo.png"
+            alt="HomeScape Group"
+            className="h-10 w-auto"
+            onError={(e) => {
+              e.target.style.display = 'none';
+              e.target.nextSibling.style.display = 'inline';
+            }}
+          />
+          <span className="text-white font-heading font-black tracking-tighter text-2xl uppercase" style={{ display: 'none' }}>
             HomeScape<span className="text-orange-500">.</span>
           </span>
         </Link>
