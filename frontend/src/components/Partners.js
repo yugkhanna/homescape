@@ -75,8 +75,8 @@ export default function Partners() {
           gradientWidth={100}
           className="py-4"
         >
-          {partners.map((name) => (
-            <PlaceholderLogo key={name} name={name} />
+          {partners.map((partner) => (
+            <PartnerLogo key={partner.name} partner={partner} />
           ))}
         </Marquee>
 
@@ -89,8 +89,8 @@ export default function Partners() {
           gradientWidth={100}
           className="py-4 mt-4"
         >
-          {[...partners].reverse().map((name) => (
-            <PlaceholderLogo key={`rev-${name}`} name={name} />
+          {[...partners].reverse().map((partner) => (
+            <PartnerLogo key={`rev-${partner.name}`} partner={partner} />
           ))}
         </Marquee>
       </motion.div>
