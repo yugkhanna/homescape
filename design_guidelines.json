@@ -1,0 +1,172 @@
+{
+  "brand_identity": {
+    "name": "HomeScape Group Pvt Ltd",
+    "tagline": "Powering Supply, Enabling Growth",
+    "archetype": "The Performance Pro",
+    "emotional_tone": "Authoritative, Precise, Industrial, Kinetic",
+    "visual_mood": "High-Contrast, Tech-Industrial, Clean, Dense"
+  },
+  "typography": {
+    "primary_font": {
+      "name": "Barlow Condensed",
+      "weights": ["400", "500", "600", "700", "900"],
+      "usage": "Headings, Hero Text, Data Points",
+      "cdn_import": "@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600&display=swap');"
+    },
+    "secondary_font": {
+      "name": "Inter",
+      "weights": ["300", "400", "500", "600"],
+      "usage": "Body text, Navigation, Button labels"
+    },
+    "rules": [
+      "Headings: Uppercase, tracking-tight, leading-none",
+      "Body: tracking-wide, leading-relaxed",
+      "Labels: Uppercase, tracking-widest, text-xs"
+    ]
+  },
+  "colors": {
+    "palette": {
+      "primary": "#020617",
+      "primary_foreground": "#FFFFFF",
+      "secondary": "#f97316",
+      "secondary_foreground": "#FFFFFF",
+      "accent": "#f8fafc",
+      "accent_foreground": "#0f172a",
+      "neutral": "#64748b",
+      "border": "#1e293b",
+      "input": "#1e293b"
+    },
+    "surface_strategies": [
+      "glassmorphism_header",
+      "solid_matte_cards",
+      "grid_lines_background"
+    ],
+    "gradients": {
+      "hero_overlay": "linear-gradient(to bottom, rgba(2,6,23,0.3), rgba(2,6,23,0.95))",
+      "orange_glow": "radial-gradient(circle at center, rgba(249,115,22,0.15) 0%, rgba(249,115,22,0) 70%)"
+    }
+  },
+  "layout_strategies": {
+    "container": "max-w-7xl mx-auto px-6 md:px-12",
+    "spacing_scale": {
+      "section_gap": "py-24 md:py-32",
+      "element_gap": "gap-8",
+      "internal_padding": "p-8 md:p-12"
+    },
+    "grid_system": "Bento Grid Mode A (Asymmetrical)",
+    "z_index": {
+      "header": 50,
+      "modal": 100,
+      "content": 10,
+      "background": 0
+    }
+  },
+  "components": {
+    "header": {
+      "type": "Sticky Glassmorphism",
+      "classes": "fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-white/10",
+      "height": "h-20",
+      "logo_text": "text-white font-black tracking-tighter text-2xl uppercase",
+      "nav_links": "text-sm font-medium text-slate-300 hover:text-orange-500 transition-colors uppercase tracking-widest"
+    },
+    "hero": {
+      "layout": "Full Screen with Overlay",
+      "text_align": "text-center md:text-left",
+      "h1_size": "text-6xl md:text-8xl lg:text-9xl",
+      "cta_button": "bg-orange-500 hover:bg-orange-600 text-white font-bold uppercase tracking-wider px-8 py-4 rounded-none clip-path-slant"
+    },
+    "verticals_grid": {
+      "style": "Bento Grid",
+      "card_style": "group relative overflow-hidden bg-slate-900 border border-slate-800 hover:border-orange-500/50 transition-all duration-500",
+      "hover_effect": "group-hover:scale-105 transition-transform duration-700"
+    },
+    "marquee": {
+      "library": "react-fast-marquee",
+      "style": "grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+    },
+    "contact_form": {
+      "library": "shadcn/ui form",
+      "style": "bg-slate-900/50 border border-slate-800 p-8 rounded-none",
+      "input_style": "bg-slate-950 border-slate-800 focus:border-orange-500 rounded-none h-12"
+    }
+  },
+  "image_urls": {
+    "hero_bg": {
+      "url": "https://images.pexels.com/photos/30824313/pexels-photo-30824313.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "alt": "Modern automated distribution warehouse interior with workers",
+      "position": "object-cover object-center w-full h-full opacity-60"
+    },
+    "about_us": {
+      "url": "https://images.unsplash.com/photo-1764114909312-c27b89ec7223?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjd8MHwxfHNlYXJjaHwzfHxpbmR1c3RyaWFsJTIwZmFjdG9yeSUyMG1hbnVmYWN0dXJpbmclMjB3b3JrZXJ8ZW58MHx8fHwxNzcxODQwODAxfDA&ixlib=rb-4.1.0&q=85",
+      "alt": "Industrial workers operating heavy machinery"
+    },
+    "verticals": [
+      {
+        "title": "Industrial Sourcing",
+        "url": "https://images.unsplash.com/photo-1764114903065-4cc137dd303b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjd8MHwxfHNlYXJjaHwyfHxpbmR1c3RyaWFsJTIwZmFjdG9yeSUyMG1hbnVmYWN0dXJpbmclMjB3b3JrZXJ8ZW58MHx8fHwxNzcxODQwODAxfDA&ixlib=rb-4.1.0&q=85",
+        "grid_span": "col-span-1 md:col-span-2 row-span-2"
+      },
+      {
+        "title": "FMCG Distribution",
+        "url": "https://images.unsplash.com/photo-1760776140488-32fcfab4066a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwyfHxzdXBlcm1hcmtldCUyMGdyb2NlcnklMjBzaGVsZiUyMGJsdXJyeXxlbnwwfHx8fDE3NzE4NDA4MDJ8MA&ixlib=rb-4.1.0&q=85",
+        "grid_span": "col-span-1 md:col-span-1 row-span-1"
+      },
+      {
+        "title": "Tech & Electronics",
+        "url": "https://images.unsplash.com/photo-1771189957050-76f13238f858?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTZ8MHwxfHNlYXJjaHwyfHxlbGVjdHJvbmljJTIwY2lyY3VpdCUyMGJvYXJkJTIwY29tcHV0ZXIlMjBjaGlwfGVufDB8fHx8MTc3MTg0MDgwM3ww&ixlib=rb-4.1.0&q=85",
+        "grid_span": "col-span-1 md:col-span-1 row-span-1"
+      },
+      {
+        "title": "Healthcare Logistics",
+        "url": "https://images.unsplash.com/photo-1671108503276-1d3d5ab23a3a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzJ8MHwxfHNlYXJjaHwxfHxwaGFybWFjZXV0aWNhbCUyMGNvbGQlMjBzdG9yYWdlJTIwbWVkaWNhbCUyMHN1cHBsaWVzfGVufDB8fHx8MTc3MTg0MDgwNHww&ixlib=rb-4.1.0&q=85",
+        "grid_span": "col-span-1 md:col-span-1 row-span-2"
+      },
+      {
+        "title": "Retail Supply",
+        "url": "https://images.unsplash.com/photo-1769107805465-bfd41863f1a0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjByZXRhaWwlMjBjbG90aGluZyUyMHN0b3JlJTIwaW50ZXJpb3J8ZW58MHx8fHwxNzcxODQwODA0fDA&ixlib=rb-4.1.0&q=85",
+        "grid_span": "col-span-1 md:col-span-2 row-span-1"
+      },
+      {
+        "title": "Strategic Consulting",
+        "url": "https://images.unsplash.com/photo-1758518730037-a16581a040e8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzN8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBib2FyZHJvb20lMjBzdHJhdGVnaWMlMjBtZWV0aW5nfGVufDB8fHx8MTc3MTg0MDgwNXww&ixlib=rb-4.1.0&q=85",
+        "grid_span": "col-span-1 md:col-span-1 row-span-1"
+      }
+    ]
+  },
+  "motion_guidelines": {
+    "library": "framer-motion",
+    "animations": {
+      "fadeInUp": {
+        "initial": { "opacity": 0, "y": 40 },
+        "whileInView": { "opacity": 1, "y": 0 },
+        "viewport": { "once": true },
+        "transition": { "duration": 0.8, "ease": "easeOut" }
+      },
+      "staggerContainer": {
+        "hidden": { "opacity": 0 },
+        "show": {
+          "opacity": 1,
+          "transition": {
+            "staggerChildren": 0.1
+          }
+        }
+      }
+    }
+  },
+  "universal_guidelines": [
+    "Do not use generic gradients. Use deep solid colors with subtle noise or 1px borders.",
+    "Use 2-3x more spacing than typical designs (e.g., py-32 for sections).",
+    "Typography: Headings must be uppercase and condensed. Body must be clean sans-serif.",
+    "Buttons: Square or slightly rounded (2px). No pill shapes for this industrial brand.",
+    "All interactive elements must have data-testid attributes."
+  ],
+  "instructions_to_main_agent": [
+    "Install 'react-fast-marquee' and 'framer-motion' using yarn.",
+    "Import Barlow Condensed and Inter fonts in index.css.",
+    "Update tailwind.config.js to include the new fonts and colors.",
+    "Build the components in this order: Header -> Hero -> About -> Verticals (Bento) -> Partners -> Contact -> Footer.",
+    "Use the specific image URLs provided for each section.",
+    "Ensure the contact form uses 'zod' for validation but does not require a backend (show success toast).",
+    "Use 'lucide-react' for icons."
+  ]
+}
