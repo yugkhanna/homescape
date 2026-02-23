@@ -6,7 +6,7 @@ import os
 import logging
 from pathlib import Path
 from pydantic import BaseModel, Field, ConfigDict
-from typing import List
+from typing import List, Optional
 import uuid
 from datetime import datetime, timezone
 
@@ -28,7 +28,7 @@ api_router = APIRouter(prefix="/api")
 
 # Define Models
 class StatusCheck(BaseModel):
-    model_config = ConfigDict(extra="ignore")  # Ignore MongoDB's _id field
+    model_config = ConfigDict(extra="ignore")
     
     id: str = Field(default_factory=lambda: str(uuid.uuid4()))
     client_name: str
@@ -37,7 +37,23 @@ class StatusCheck(BaseModel):
 class StatusCheckCreate(BaseModel):
     client_name: str
 
-# Add your routes to the router instead of directly to app
+class ContactCreate(BaseModel):
+    name: str
+    company: str
+    vertical: str
+    message: str
+
+class ContactResponse(BaseModel):
+    id: str
+    name: str
+    company: str
+    vertical: str
+    message: str
+    created_at: str
+    status: str
+
+
+# Routes
 @api_router.get("/")
 async def root():
     return {"message": "Hello World"}
@@ -46,25 +62,46 @@ async def root():
 async def create_status_check(input: StatusCheckCreate):
     status_dict = input.model_dump()
     status_obj = StatusCheck(**status_dict)
-    
-    # Convert to dict and serialize datetime to ISO string for MongoDB
     doc = status_obj.model_dump()
     doc['timestamp'] = doc['timestamp'].isoformat()
-    
     _ = await db.status_checks.insert_one(doc)
     return status_obj
 
 @api_router.get("/status", response_model=List[StatusCheck])
 async def get_status_checks():
-    # Exclude MongoDB's _id field from the query results
     status_checks = await db.status_checks.find({}, {"_id": 0}).to_list(1000)
-    
-    # Convert ISO string timestamps back to datetime objects
     for check in status_checks:
         if isinstance(check['timestamp'], str):
             check['timestamp'] = datetime.fromisoformat(check['timestamp'])
-    
     return status_checks
+
+@api_router.post("/contact", response_model=ContactResponse)
+async def create_contact(input: ContactCreate):
+    contact_id = str(uuid.uuid4())
+    created_at = datetime.now(timezone.utc).isoformat()
+    
+    doc = {
+        "id": contact_id,
+        "name": input.name,
+        "company": input.company,
+        "vertical": input.vertical,
+        "message": input.message,
+        "created_at": created_at,
+        "status": "received",
+    }
+    
+    await db.contacts.insert_one(doc)
+    
+    return ContactResponse(
+        id=contact_id,
+        name=input.name,
+        company=input.company,
+        vertical=input.vertical,
+        message=input.message,
+        created_at=created_at,
+        status="received",
+    )
+
 
 # Include the router in the main app
 app.include_router(api_router)
