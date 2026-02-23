@@ -38,10 +38,10 @@ class StatusCheckCreate(BaseModel):
     client_name: str
 
 class ContactCreate(BaseModel):
-    name: str
-    company: str
-    vertical: str
-    message: str
+    name: str = Field(..., min_length=1, description="Full name is required")
+    company: str = Field(..., min_length=1, description="Company name is required")
+    vertical: str = Field(..., min_length=1, description="Vertical selection is required")
+    message: str = Field(..., min_length=1, description="Message is required")
 
 class ContactResponse(BaseModel):
     id: str
