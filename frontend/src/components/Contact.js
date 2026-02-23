@@ -12,9 +12,8 @@ import {
 } from "@/components/ui/select";
 import { toast } from "sonner";
 import { Send, MapPin, Mail, Phone } from "lucide-react";
-import axios from "axios";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const FORMSPREE_ID = process.env.REACT_APP_FORMSPREE_ID;
 
 const verticalOptions = [
   "Industrial Sourcing",
