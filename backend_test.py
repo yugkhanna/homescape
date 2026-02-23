@@ -122,16 +122,12 @@ class BackendTester:
         
         success, response = self.test_api_endpoint('POST', '/contact', 422, invalid_data)
         
-        if not success and response.get('detail'):
+        if success and response.get('detail'):
             self.log_test("POST /contact (validation)", True, 
-                         "API correctly rejected invalid data")
-        elif success:
-            # API accepted invalid data - this might be a validation issue
-            self.log_test("POST /contact (validation)", False, 
-                         "API should validate required fields", response)
+                         "API correctly rejected invalid data with validation errors")
         else:
             self.log_test("POST /contact (validation)", False, 
-                         "Unexpected validation behavior", response)
+                         "API validation not working properly", response)
 
     def test_cors_headers(self):
         """Test CORS configuration"""
