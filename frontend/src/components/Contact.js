@@ -59,7 +59,18 @@ export default function Contact() {
 
     setLoading(true);
     try {
-      await axios.post(`${BACKEND_URL}/api/contact`, formData);
+      const endpoint = FORMSPREE_ID
+        ? `https://formspree.io/f/${FORMSPREE_ID}`
+        : `${process.env.REACT_APP_BACKEND_URL}/api/contact`;
+
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) throw new Error("Submission failed");
+
       setSubmitted(true);
       toast.success("Message sent successfully! We'll be in touch soon.");
       setFormData({ name: "", company: "", vertical: "", message: "" });
