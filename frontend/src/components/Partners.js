@@ -2,16 +2,12 @@ import { motion } from "framer-motion";
 import Marquee from "react-fast-marquee";
 
 const partners = [
-  { name: "Apex Industries", logo: null },
-  { name: "NovaTech Solutions", logo: null },
-  { name: "Global Freight Co.", logo: null },
-  { name: "Summit Logistics", logo: null },
-  { name: "Vertex Supply", logo: null },
-  { name: "PrimeWare Inc.", logo: null },
-  { name: "Atlas Trading", logo: null },
-  { name: "Meridian Corp.", logo: null },
-  { name: "Zenith Materials", logo: null },
-  { name: "OmniPath Systems", logo: null },
+  { name: "Hafele", logo: "/hafele.png" },
+  { name: "Kitchen Aid", logo: "/kitchen_aid.png" },
+  { name: "Napoleon", logo: "/napoleon.png" },
+  { name: "Nobili", logo: "/nobili.png" },
+  { name: "Canon", logo: "/canon.png" },
+  { name: "Texas Instruments", logo: "/texas_instruments.png" },
 ];
 
 function PartnerLogo({ partner }) {
@@ -24,7 +20,7 @@ function PartnerLogo({ partner }) {
         <img
           src={partner.logo}
           alt={partner.name}
-          className="h-10 md:h-12 w-auto object-contain"
+          className="h-16 md:h-24 w-auto object-contain"
         />
       ) : (
         <span className="font-heading font-bold uppercase tracking-wider text-slate-300 text-lg md:text-xl whitespace-nowrap">
