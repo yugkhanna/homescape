@@ -61,25 +61,6 @@ export default function Footer() {
               )}
             </nav>
           </div>
-
-          {/* Social */}
-          <div>
-            <span className="text-xs text-orange-500 uppercase tracking-widest font-heading font-semibold block mb-4">
-              Follow Us
-            </span>
-            <div className="flex gap-3">
-              {socialLinks.map((social) => (
-                <span
-                  key={social.label}
-                  className="w-10 h-10 bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-orange-500 hover:border-orange-500/50 transition-all duration-300 cursor-pointer"
-                  title={social.label}
-                  data-testid={`footer-social-${social.label.toLowerCase()}`}
-                >
-                  <social.icon size={18} />
-                </span>
-              ))}
-            </div>
-          </div>
         </div>
 
         {/* Bottom bar */}
