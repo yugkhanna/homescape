@@ -101,10 +101,10 @@ export default function Hero() {
           data-testid="hero-stats"
         >
           {[
-            { value: "500+", label: "B2B Partners" },
-            { value: "6", label: "Industry Verticals" },
-            { value: "98%", label: "Fulfillment Rate" },
-            { value: "12+", label: "Years Experience" },
+            { value: "Retail Channel Supply", label: "" },
+            { value: "Project & Builder Supply", label: "" },
+            { value: "Premium Appliance Distribution", label: "" },
+            { value: "Kitchen & Modular Ecosystem", label: "" },
           ].map((stat, i) => (
             <div
               key={stat.label}

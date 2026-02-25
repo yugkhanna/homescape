@@ -16,12 +16,12 @@ import { Send, MapPin, Mail, Phone } from "lucide-react";
 const FORMSPREE_ID = process.env.REACT_APP_FORMSPREE_ID;
 
 const verticalOptions = [
-  "Industrial Sourcing",
-  "FMCG Distribution",
-  "Tech & Electronics",
-  "Healthcare Logistics",
-  "Retail Supply",
-  "Strategic Consulting",
+  "Kitchen Appliances & Built-ins",
+  "Kitchen Fixtures & Surfaces",
+  "Outdoor & Lifestyle Cooking",
+  "Education & Technical Devices",
+  "Retail Channel Distribution",
+  "Project & Institutional Supply",
   "Other",
 ];
 
@@ -116,9 +116,9 @@ export default function Contact() {
             {/* Contact Info */}
             <div className="space-y-6">
               {[
-                { icon: MapPin, text: "Mumbai, Maharashtra, India" },
-                { icon: Mail, text: "partnerships@homescapegroup.com" },
-                { icon: Phone, text: "+91 (22) 4567-8900" },
+                { icon: MapPin, text: "Hyderabad, Telangana, India" },
+                { icon: Mail, text: "contact@homescapegroup.com" },
+                { icon: Phone, text: "+91 8978948450" },
               ].map((item) => (
                 <div
                   key={item.text}

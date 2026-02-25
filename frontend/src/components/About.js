@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
-import { TrendingUp, Package, Globe } from "lucide-react";
+import { Package, Globe, DollarSign } from "lucide-react";
 
-const ABOUT_IMG = "https://images.unsplash.com/photo-1764114909312-c27b89ec7223?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjd8MHwxfHNlYXJjaHwzfHxpbmR1c3RyaWFsJTIwZmFjdG9yeSUyMG1hbnVmYWN0dXJpbmclMjB3b3JrZXJ8ZW58MHx8fHwxNzcxODQwODAxfDA&ixlib=rb-4.1.0&q=85";
+const ABOUT_IMG = "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
 const metrics = [
-  { icon: TrendingUp, label: "Supply Efficiency", value: "98.7%" },
-  { icon: Package, label: "Orders Fulfilled", value: "1.2M+" },
-  { icon: Globe, label: "Regions Covered", value: "24+" },
+  { icon: Package, label: "", value: "Dispatch Control" },
+  { icon: DollarSign, label: "", value: "Credit Transparency" },
+  { icon: Globe, label: "", value: "Brand Coordination" },
 ];
 
 const fadeInUp = {
@@ -44,31 +44,17 @@ export default function About() {
               className="text-slate-400 text-base tracking-wide leading-relaxed mb-6"
               data-testid="about-description"
             >
-              HomeScape Group Pvt Ltd is the vital link in the modern B2B ecosystem.
-              We provide vertical-agnostic distribution frameworks that scale with
-              your ambition. From raw material sourcing to last-mile delivery, our
-              integrated approach ensures seamless operations across every touchpoint.
+             HomeScape Group Pvt Ltd is a distribution-focused company engaged in supplying premium home, kitchen,
+              and lifestyle products through an established dealer and channel network. We work with
+              reputed international and domestic brands and focus on structured market development, reliable
+              inventory flow, and long-term partner relationships rather than short-term trading.
             </p>
             <p className="text-slate-400 text-base tracking-wide leading-relaxed mb-10">
-              With over a decade of experience spanning six industry verticals, we
-              combine deep market knowledge with cutting-edge logistics technology
-              to deliver results that matter. Our commitment to operational excellence
-              drives every partnership forward.
+              Our operating model is built around three core functions: brand representation, regional distribution
+              management, and dealer ecosystem support. This includes warehousing coordination, order consolidation,
+              compliance documentation and more to ensure smooth execution  across the supply chain.
+              HomeScape enables retailers and project partners to plan confidently and avoid operational disruptions.
             </p>
-
-            {/* Key points */}
-            <div className="space-y-4">
-              {[
-                "Vertical-agnostic distribution frameworks",
-                "End-to-end supply chain integration",
-                "Data-driven logistics optimization",
-              ].map((point, i) => (
-                <div key={i} className="flex items-center gap-3">
-                  <div className="w-1.5 h-1.5 bg-orange-500 flex-shrink-0" />
-                  <span className="text-slate-300 text-sm tracking-wide">{point}</span>
-                </div>
-              ))}
-            </div>
           </motion.div>
 
           {/* Right - Image + Metrics Card */}
@@ -97,7 +83,6 @@ export default function About() {
               data-testid="about-metrics-card"
             >
               <span className="text-xs text-orange-500 uppercase tracking-widest font-heading font-semibold block mb-5">
-                Efficiency Metrics
               </span>
               <div className="grid grid-cols-3 gap-4">
                 {metrics.map((metric) => (
