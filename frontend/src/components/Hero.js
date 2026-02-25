@@ -111,7 +111,7 @@ export default function Hero() {
               className="bg-slate-950/60 backdrop-blur-sm px-6 py-6 md:py-8"
               data-testid={`hero-stat-${i}`}
             >
-              <span className="font-heading font-black text-3xl md:text-4xl text-white block">
+              <span className="font-heading font-black text-3xl md:text-2xl text-white block">
                 {stat.value}
               </span>
               <span className="text-xs text-slate-400 uppercase tracking-widest mt-1 block">
