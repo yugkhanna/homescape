@@ -42,9 +42,9 @@ export default function Header() {
           data-testid="header-logo"
         >
           <img
-            src="/logo.png"
+            src="/company_logo.png"
             alt="HomeScape Group"
-            className="h-10 w-auto"
+            className="h-20 w-auto"
             onError={(e) => {
               e.target.style.display = 'none';
               e.target.nextSibling.style.display = 'inline';

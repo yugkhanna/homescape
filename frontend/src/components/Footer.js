@@ -17,9 +17,24 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
           {/* Brand */}
           <div>
-            <span className="text-white font-heading font-black tracking-tighter text-2xl uppercase block mb-4">
-              HomeScape<span className="text-orange-500">.</span>
-            </span>
+            <div className="flex items-center mb-4">
+              <img
+                src="/company_logo.png"
+                alt="HomeScape Group"
+                className="h-8 md:h-10 w-auto" // Slightly smaller for the footer
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                  e.target.nextSibling.style.display = 'block';
+                }}
+              />
+              {/* Text fallback if image fails */}
+              <span
+                className="text-white font-heading font-black tracking-tighter text-2xl uppercase"
+                style={{ display: 'none' }}
+              >
+                HomeScape<span className="text-orange-500">.</span>
+              </span>
+            </div>
             <p className="text-slate-400 text-sm tracking-wide leading-relaxed max-w-xs">
               Powering Supply, Enabling Growth. Your trusted B2B distribution
               partner across every vertical.
